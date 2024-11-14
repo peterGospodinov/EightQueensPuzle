@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using QueensPuzle.Web.Data;
+using QueensPuzle.Web.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +8,8 @@ builder.Services.AddControllers();
 
 builder.Services.AddDbContext<ResultContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddHostedService<ResultProcessingService>();
 
 var app = builder.Build();
 

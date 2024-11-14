@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -17,8 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\QueensPuzle.Application\QueensPuzle.Application.csproj" />
-    <ProjectReference Include="..\QueensPuzle.Application\QueensPuzzle.Application.csproj" />
+    <ProjectReference Include="..\QueensPuzzle.Application\QueensPuzzle.Application.csproj" />
   </ItemGroup>
 
   <ItemGroup>

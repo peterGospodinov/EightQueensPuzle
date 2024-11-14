@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\QueensPuzle.Application\QueensPuzzle.Application.csproj" />
+    <ProjectReference Include="..\QueensPuzzle.Application\QueensPuzzle.Application.csproj" />
   </ItemGroup>
 
   <ItemGroup>

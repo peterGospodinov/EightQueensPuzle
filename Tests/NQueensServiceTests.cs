@@ -28,7 +28,29 @@ namespace Tests
         }
 
         [Fact]
-        public async Task TestEightQueensResult()
+        public async Task Test3QueensResult()
+        {
+            var service = new NQueensService(producer, consumer);
+            var result = await service.SolvePuzle(3);
+
+            Assert.NotNull(result);
+            Assert.Equal(0, result.FundamentalSolutionsCount);
+            Assert.Equal(0, result.TotalSolutionsCount);
+        }
+
+        [Fact]
+        public async Task Test4QueensResult()
+        {
+            var service = new NQueensService(producer, consumer);
+            var result = await service.SolvePuzle(4);
+
+            Assert.NotNull(result);
+            Assert.Equal(1, result.FundamentalSolutionsCount);
+            Assert.Equal(2, result.TotalSolutionsCount);
+        }
+
+        [Fact]
+        public async Task Test8QueensResult()
         {
             var service = new NQueensService(producer, consumer);
             var result = await service.SolvePuzle(8);
@@ -36,6 +58,17 @@ namespace Tests
             Assert.NotNull(result);
             Assert.Equal(12, result.FundamentalSolutionsCount);
             Assert.Equal(92, result.TotalSolutionsCount);
+        }
+
+        [Fact]
+        public async Task Test12QueensResult()
+        {
+            var service = new NQueensService(producer, consumer);
+            var result = await service.SolvePuzle(12);
+
+            Assert.NotNull(result);
+            Assert.Equal(1787, result.FundamentalSolutionsCount);
+            Assert.Equal(14200, result.TotalSolutionsCount);
         }
     }
 }

@@ -40,7 +40,7 @@ namespace QueensPuzzle.Application.Services
             solutions.CompleteAdding();
             await consumerTask;
 
-            result.N = n;
+            result.Id = n;
             result.FundamentalSolutionsCount = fundamentalSolutions;
             result.TotalSolutionsCount = solutionCounter.Count;
             result.ElapsedTime = stopwatch.Elapsed.ToString();
