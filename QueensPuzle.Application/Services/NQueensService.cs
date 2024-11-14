@@ -1,10 +1,10 @@
-﻿using EightQueensPuzleConsoleApp.Models;
-using QueensPuzle.Application.Consumer;
-using QueensPuzle.Application.Producer;
+﻿using QueensPuzzle.Application.Consumer;
+using QueensPuzzle.Application.Models;
+using QueensPuzzle.Application.Producer;
 using System.Collections.Concurrent;
 using System.Diagnostics;
 
-namespace EightQueensPuzleConsoleApp
+namespace QueensPuzzle.Application.Services
 {
     public class NQueensService
     {

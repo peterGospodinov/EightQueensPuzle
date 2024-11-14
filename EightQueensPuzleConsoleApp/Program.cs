@@ -1,8 +1,8 @@
-﻿using EightQueensPuzleConsoleApp;
-using EightQueensPuzleConsoleApp.Models;
-using QueensPuzle.Application.Consumer;
-using QueensPuzle.Application.Normalizer;
-using QueensPuzle.Application.Producer;
+﻿using QueensPuzzle.Application.Consumer;
+using QueensPuzzle.Application.Models;
+using QueensPuzzle.Application.Normalizer;
+using QueensPuzzle.Application.Producer;
+using QueensPuzzle.Application.Services;
 
 public class Program
 {

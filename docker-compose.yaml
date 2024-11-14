@@ -1,7 +1,7 @@
 services:
    sqlDatabase:
       image: mcr.microsoft.com/mssql/server
-      container_name: mssql_reservation
+      container_name: mssql_nqueenspuzzle
       hostname: mssql
       environment:
         ACCEPT_EULA: "Y"
@@ -10,13 +10,11 @@ services:
       env_file:
         - .env
       ports:
-        - "1433:1433"
-      volumes:
-        - ./initmssql.sql:/initmssql.sql
+        - "1433:1433"    
       entrypoint:
         - /bin/bash
         - -c
         - |
           /opt/mssql/bin/sqlservr & sleep 30
-          /opt/mssql-tools18/bin/sqlcmd -U sa -P $MSSQL_SA_PASSWORD -d master -C -i /initmssql.sql
+          /opt/mssql-tools18/bin/sqlcmd -U sa -P $MSSQL_SA_PASSWORD -d master -C
           sleep infinity

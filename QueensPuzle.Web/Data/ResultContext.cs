@@ -1,5 +1,5 @@
-﻿using EightQueensPuzleConsoleApp.Models;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using QueensPuzzle.Application.Models;
 
 namespace QueensPuzle.Web.Data
 {

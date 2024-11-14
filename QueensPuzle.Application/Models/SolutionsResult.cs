@@ -1,4 +1,4 @@
-﻿namespace EightQueensPuzleConsoleApp.Models
+﻿namespace QueensPuzzle.Application.Models
 {
     public class SolutionResult
     {

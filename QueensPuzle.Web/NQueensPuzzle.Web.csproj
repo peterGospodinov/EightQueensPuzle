@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\QueensPuzle.Application\QueensPuzle.Application.csproj" />
+    <ProjectReference Include="..\QueensPuzle.Application\QueensPuzzle.Application.csproj" />
   </ItemGroup>
 
   <ItemGroup>

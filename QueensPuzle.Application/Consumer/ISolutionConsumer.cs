@@ -1,6 +1,6 @@
 ﻿using System.Collections.Concurrent;
 
-namespace QueensPuzle.Application.Consumer
+namespace QueensPuzzle.Application.Consumer
 {
     public interface ISolutionConsumer
     {
