@@ -22,7 +22,7 @@ namespace EightQueensPuzleConsoleApp
                 solutionCounter.Add(1);
                 if (solutionCounter.Count % 100 == 0)
                 {
-                    Console.WriteLine($"[{DateTime.Now:yyyy-MM-dd HH:mm:ss}] Solutions generated: {solutionCounter.Count}");
+                    //Console.WriteLine($"[{DateTime.Now:yyyy-MM-dd HH:mm:ss}] Solutions generated: {solutionCounter.Count}");
                 }
                 return;
             }

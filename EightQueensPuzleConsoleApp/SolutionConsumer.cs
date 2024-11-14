@@ -24,7 +24,7 @@ namespace EightQueensPuzleConsoleApp
                 Interlocked.Increment(ref processedCount);
                 if (processedCount % 100 == 0)
                 {
-                    Console.WriteLine($"[{DateTime.Now:yyyy-MM-dd HH:mm:ss}] Solutions processed: {processedCount}");
+                    //Console.WriteLine($"[{DateTime.Now:yyyy-MM-dd HH:mm:ss}] Solutions processed: {processedCount}");
                 }
             });
 
