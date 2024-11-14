@@ -1,4 +1,6 @@
 ﻿using EightQueensPuzleConsoleApp.Models;
+using QueensPuzle.Application.Consumer;
+using QueensPuzle.Application.Producer;
 using System.Collections.Concurrent;
 using System.Diagnostics;
 

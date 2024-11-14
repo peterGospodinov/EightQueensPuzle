@@ -3,9 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EightQueensPuzleConsoleApp", "EightQueensPuzleConsoleApp\EightQueensPuzleConsoleApp.csproj", "{41DB5D15-B7F0-487B-8355-3FB8372F3CE8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueensPuzle.ConsoleApp", "EightQueensPuzleConsoleApp\QueensPuzle.ConsoleApp.csproj", "{41DB5D15-B7F0-487B-8355-3FB8372F3CE8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{F670E082-8ED4-4301-B883-856B17950597}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj", "{F670E082-8ED4-4301-B883-856B17950597}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueensPuzle.Application", "QueensPuzle.Application\QueensPuzle.Application.csproj", "{5350D708-3EE1-486F-80F1-6315DBEB60AB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueensPuzle.Web", "QueensPuzle.Web\QueensPuzle.Web.csproj", "{0DAC87F9-8AD6-4282-8D89-199D52B5A729}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DockerCompose", "DockerCompose", "{3F0AB7C8-EB23-4E8B-87D3-9D755ED415BA}"
+	ProjectSection(SolutionItems) = preProject
+		.env = .env
+		docker-compose.yaml = docker-compose.yaml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +51,30 @@ Global
 		{F670E082-8ED4-4301-B883-856B17950597}.Release|x64.Build.0 = Release|Any CPU
 		{F670E082-8ED4-4301-B883-856B17950597}.Release|x86.ActiveCfg = Release|Any CPU
 		{F670E082-8ED4-4301-B883-856B17950597}.Release|x86.Build.0 = Release|Any CPU
+		{5350D708-3EE1-486F-80F1-6315DBEB60AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5350D708-3EE1-486F-80F1-6315DBEB60AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5350D708-3EE1-486F-80F1-6315DBEB60AB}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{5350D708-3EE1-486F-80F1-6315DBEB60AB}.Debug|x64.Build.0 = Debug|Any CPU
+		{5350D708-3EE1-486F-80F1-6315DBEB60AB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5350D708-3EE1-486F-80F1-6315DBEB60AB}.Debug|x86.Build.0 = Debug|Any CPU
+		{5350D708-3EE1-486F-80F1-6315DBEB60AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5350D708-3EE1-486F-80F1-6315DBEB60AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5350D708-3EE1-486F-80F1-6315DBEB60AB}.Release|x64.ActiveCfg = Release|Any CPU
+		{5350D708-3EE1-486F-80F1-6315DBEB60AB}.Release|x64.Build.0 = Release|Any CPU
+		{5350D708-3EE1-486F-80F1-6315DBEB60AB}.Release|x86.ActiveCfg = Release|Any CPU
+		{5350D708-3EE1-486F-80F1-6315DBEB60AB}.Release|x86.Build.0 = Release|Any CPU
+		{0DAC87F9-8AD6-4282-8D89-199D52B5A729}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DAC87F9-8AD6-4282-8D89-199D52B5A729}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DAC87F9-8AD6-4282-8D89-199D52B5A729}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{0DAC87F9-8AD6-4282-8D89-199D52B5A729}.Debug|x64.Build.0 = Debug|Any CPU
+		{0DAC87F9-8AD6-4282-8D89-199D52B5A729}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0DAC87F9-8AD6-4282-8D89-199D52B5A729}.Debug|x86.Build.0 = Debug|Any CPU
+		{0DAC87F9-8AD6-4282-8D89-199D52B5A729}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DAC87F9-8AD6-4282-8D89-199D52B5A729}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DAC87F9-8AD6-4282-8D89-199D52B5A729}.Release|x64.ActiveCfg = Release|Any CPU
+		{0DAC87F9-8AD6-4282-8D89-199D52B5A729}.Release|x64.Build.0 = Release|Any CPU
+		{0DAC87F9-8AD6-4282-8D89-199D52B5A729}.Release|x86.ActiveCfg = Release|Any CPU
+		{0DAC87F9-8AD6-4282-8D89-199D52B5A729}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

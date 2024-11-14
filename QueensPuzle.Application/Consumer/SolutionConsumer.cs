@@ -1,6 +1,7 @@
 ﻿using System.Collections.Concurrent;
+using QueensPuzle.Application.Normalizer;
 
-namespace EightQueensPuzleConsoleApp
+namespace QueensPuzle.Application.Consumer
 {
     public class SolutionConsumer : ISolutionConsumer
     {

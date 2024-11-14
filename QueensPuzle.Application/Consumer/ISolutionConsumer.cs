@@ -1,6 +1,6 @@
 ﻿using System.Collections.Concurrent;
 
-namespace EightQueensPuzleConsoleApp
+namespace QueensPuzle.Application.Consumer
 {
     public interface ISolutionConsumer
     {

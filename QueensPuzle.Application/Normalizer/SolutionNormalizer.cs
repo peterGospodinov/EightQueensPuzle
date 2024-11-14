@@ -1,4 +1,4 @@
-﻿namespace EightQueensPuzleConsoleApp
+﻿namespace QueensPuzle.Application.Normalizer
 {
     public class SolutionNormalizer
     {

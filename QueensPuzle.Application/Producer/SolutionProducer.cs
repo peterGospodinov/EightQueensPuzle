@@ -1,6 +1,6 @@
 ﻿using System.Collections.Concurrent;
 
-namespace EightQueensPuzleConsoleApp
+namespace QueensPuzle.Application.Producer
 {
     public class SolutionProducer : ISolutionProducer
     {

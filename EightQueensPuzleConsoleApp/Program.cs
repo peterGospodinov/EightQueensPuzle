@@ -1,13 +1,14 @@
 ﻿using EightQueensPuzleConsoleApp;
 using EightQueensPuzleConsoleApp.Models;
-using System.Collections.Concurrent;
-using System.Diagnostics;
+using QueensPuzle.Application.Consumer;
+using QueensPuzle.Application.Normalizer;
+using QueensPuzle.Application.Producer;
 
 public class Program
 {
     static async Task Main()
     {
-        int n = 13;
+        int n = 8;
         ISolutionProducer producer = new SolutionProducer();
         SolutionNormalizer normalizer = new SolutionNormalizer();
         ISolutionConsumer consumer = new SolutionConsumer(normalizer);
