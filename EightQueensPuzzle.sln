@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NQueensPuzzle.ConsoleApp", "EightQueensPuzzleConsoleApp\NQueensPuzzle.ConsoleApp.csproj", "{41DB5D15-B7F0-487B-8355-3FB8372F3CE8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueensPuzzle.ConsoleApp", "EightQueensPuzzleConsoleApp\QueensPuzzle.ConsoleApp.csproj", "{41DB5D15-B7F0-487B-8355-3FB8372F3CE8}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj", "{F670E082-8ED4-4301-B883-856B17950597}"
 EndProject

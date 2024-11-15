@@ -40,7 +40,7 @@ namespace QueensPuzle.Web.Services
                         _n++;
                     }
                 }
-                await Task.Delay(TimeSpan.FromMilliseconds(100), stoppingToken);
+                await Task.Delay(TimeSpan.FromMilliseconds(1000), stoppingToken);
             }
         }
 
