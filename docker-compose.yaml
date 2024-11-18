@@ -1,20 +1,59 @@
 services:
    sqlDatabase:
-      image: mcr.microsoft.com/mssql/server
-      container_name: mssql_nqueenspuzzle
+      container_name: mssql_queenspuzzle
+      image: mcr.microsoft.com/mssql/server:2022-latest
       hostname: mssql
       environment:
         ACCEPT_EULA: "Y"
         MSSQL_SA_PASSWORD: ${MSSQL_SA_PASSWORD}
+        MSSQL_MEMORY_LIMIT_MB: "2048"
+        MSSQL_PID: "Developer"
+        MSSQL_DATA_DIR: "/var/opt/mssql/data"
+        MSSQL_LOG_DIR: "/var/opt/mssql/log"
+        MSSQL_BACKUP_DIR: "/var/opt/mssql/backup"
         MSSQL_TRUST_SERVER_CERTIFICATE: "True"
       env_file:
         - .env
+      volumes:
+        - sqldata:/var/opt/mssql
+        - ./log:/var/opt/mssql/log
+        - ./backup:/var/opt/mssql/backup
+      deploy:
+        resources:
+           limits:
+            memory: 4g
+            cpus: "2"
       ports:
         - "1433:1433"    
-      entrypoint:
-        - /bin/bash
-        - -c
-        - |
-          /opt/mssql/bin/sqlservr & sleep 30
-          /opt/mssql-tools18/bin/sqlcmd -U sa -P $MSSQL_SA_PASSWORD -d master -C
-          sleep infinity
+      healthcheck:
+          test: ["CMD-SHELL", "/opt/mssql-tools/bin/sqlcmd -U sa -P '${MSSQL_SA_PASSWORD}' -Q 'SELECT 1'"]
+          interval: 30s
+          retries: 5
+          timeout: 10s
+          start_period: 10s
+      networks:
+       - sql_network
+
+   webapi:
+    image: queens-puzzle
+    container_name: queenspuzzle-api-container
+    build:
+        context: .
+        dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    environment:
+        - ConnectionStrings__DefaultConnection=Server=localhost,1433;Database=Reservations;Encrypt=False; TrustServerCertificate=True; User Id=sa; Password=MyStrongS1rootP@ssword;
+    restart: on-failure
+    depends_on:
+       sqlDatabase:
+        condition: service_started
+    networks:
+       - sql_network
+      
+
+volumes:
+    sqldata:
+
+networks:
+  sql_network:

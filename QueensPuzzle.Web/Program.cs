@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using NQueensPuzzle.Web.Services;
 using QueensPuzle.Web.Data;
 using QueensPuzle.Web.Services;
 
@@ -8,6 +9,8 @@ builder.Services.AddControllers();
 
 builder.Services.AddDbContext<ResultContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+Console.WriteLine(builder.Configuration.GetConnectionString("DefaultConnection").ToString());
+builder.Services.AddScoped<DbMigrationService>();
 
 builder.Services.AddHostedService<ResultProcessingService>();
 
@@ -21,6 +24,14 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 var app = builder.Build();
+
+
+using (var scope = app.Services.CreateScope())
+{
+    var dbMigrationService = scope.ServiceProvider.GetRequiredService<DbMigrationService>();
+    dbMigrationService.ApplyMigrations();  // Assuming you have a method to apply migrations
+}
+
 
 app.UseAuthorization();
 app.MapControllers();

@@ -4,12 +4,13 @@ WORKDIR /app
 
 
 # Copy the project files and restore dependencies
-COPY QueensPuzzle.Web/QueensPuzzle.Web.csproj ./QueensPuzzle.Web/
-RUN dotnet restore ./QueensPuzzle.Web/QueensPuzzle.Web.csproj
+COPY ["QueensPuzzle.Web/NQueensPuzzle.Web.csproj", "QueensPuzzle.Web/"]
+RUN dotnet restore "QueensPuzzle.Web/NQueensPuzzle.Web.csproj"
 
-# Copy the remaining files and publish the application
-COPY . ./
-RUN dotnet publish ./QueensPuzzle.Web -c Release -o out
+# Copy everything else and build
+COPY . .
+WORKDIR /app/QueensPuzzle.Web
+RUN dotnet publish -c Release -o /app/out
 
 # Use the official ASP.NET Core runtime image for running the application
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
@@ -20,4 +21,4 @@ COPY --from=build-env /app/out .
 EXPOSE 80
 
 # Set the entry point for the Docker container
-ENTRYPOINT ["dotnet", "QueensPuzzle.dll"]
+ENTRYPOINT ["dotnet", "NQueensPuzzle.Web.dll"]
