@@ -9,7 +9,7 @@ builder.Services.AddControllers();
 
 builder.Services.AddDbContext<ResultContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-Console.WriteLine(builder.Configuration.GetConnectionString("DefaultConnection").ToString());
+
 builder.Services.AddScoped<DbMigrationService>();
 
 builder.Services.AddHostedService<ResultProcessingService>();
