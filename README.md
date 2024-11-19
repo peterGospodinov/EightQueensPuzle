@@ -4,7 +4,7 @@ This project provides a solution to the classic N Queens puzzle, where the chall
 
 - **Solution Producer and Consumer**: Implements producer-consumer logic to generate and process solutions asynchronously.
 - **Parallel Computation**: Uses `Parallel.ForEach` to process multiple solutions concurrently for improved efficiency.
-- **Fundamental Solutions Normalization**: Uses a normalization process to identify unique, fundamental solutions among all possible configurations.
+- **Fundamental Solutions Normalization**: Uses a normalization process to identify unique, fundamental solutions among all possible configurations. The normalization ensures that equivalent solutions, which can be derived from each other by rotating or reflecting the chessboard, are counted only once.
 - **BlockingCollection**: Utilizes `BlockingCollection` for thread-safe communication between solution producers and consumers.
 - **EF Core and Database Persistence**: The results of the computation are saved into an SQL database using Entity Framework Core. The project includes database migrations, which are applied automatically after the first start.
 - **API Access**: Provides an API to access stored solutions. The API returns a JSON object representing the solution result.
