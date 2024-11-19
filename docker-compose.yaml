@@ -30,7 +30,7 @@ services:
     ports:
       - "8080:8080"
     environment:
-        - ConnectionStrings__DefaultConnection=Server=sql_server_container,1433;Database=Reservations;User Id=sa;Password=MyStrongS1rootP@ssword;TrustServerCertificate=true;
+        - ConnectionStrings__DefaultConnection=Server=sqlDatabase,1433;Database=Reservations;User Id=sa;Password=MyStrongS1rootP@ssword;TrustServerCertificate=true;
     restart: on-failure
     depends_on:
        sqlDatabase:
