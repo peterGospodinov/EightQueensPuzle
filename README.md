@@ -3,8 +3,8 @@
 This project provides a solution to the classic N Queens puzzle, where the challenge is to place N queens on an NxN chessboard such that no two queens threaten each other. The resulting solutions are stored in a Microsoft SQL Server database and can be accessed via an API. The project aims to efficiently solve the N Queens puzzle using parallel computation and advanced solution normalization techniques to identify fundamental solutions.
 
 - **Solution Producer and Consumer**: Implements producer-consumer logic to generate and process solutions asynchronously.
-- **Fundamental Solutions Normalization**: Uses a normalization process to identify unique, fundamental solutions among all possible configurations.
 - **Parallel Computation**: Uses `Parallel.ForEach` to process multiple solutions concurrently for improved efficiency.
+- **Fundamental Solutions Normalization**: Uses a normalization process to identify unique, fundamental solutions among all possible configurations.
 - **BlockingCollection**: Utilizes `BlockingCollection` for thread-safe communication between solution producers and consumers.
 - **EF Core and Database Persistence**: The results of the computation are saved into an SQL database using Entity Framework Core. The project includes database migrations, which are applied automatically after the first start.
 - **API Access**: Provides an API to access stored solutions, enabling easy integration with other systems.
