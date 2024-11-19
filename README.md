@@ -61,6 +61,12 @@ dotnet test
 
 ## Deployment
 
+### Prerequisites
+
+- [.NET 8 SDK](https://dotnet.microsoft.com/download)
+- [Docker](https://www.docker.com/products/docker-desktop)
+
+
 Use Docker Compose to spin up all services, including MSSQL and the web API:
 
 ```sh
