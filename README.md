@@ -20,7 +20,7 @@ This project provides a solution to the classic N Queens puzzle, where the chall
 ### API Endpoints
 
 - **Get Results**: [http://localhost:8080/api/Results](http://localhost:8080/api/Results)
-- **Get Result by ID** : http://localhost:8080/api/Results/{id}
+- **Get Result by ID** : [http://localhost:8080/api/Results/{id}] (http://localhost:8080/api/Results/{id})
 - **Swagger Documentation**: [http://localhost:5142/swagger/index.html](http://localhost:5142/swagger/index.html). Note that Swagger can be used only if `app.Environment.IsDevelopment()` is true.
 
 ## Getting Started
