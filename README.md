@@ -52,7 +52,7 @@ Follow these steps to get the project up and running on your local machine:
 ## Tests
 
 ### Unit Tests
-
+The unit tests validate the correctness of the N Queens solution for various board sizes: 2, 3, 4, 8, and 12 queens. Each test checks the number of fundamental and total solutions.
 Unit tests are available in the `/tests` directory. Run tests with:
 
 ```sh
