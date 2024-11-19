@@ -33,13 +33,7 @@ Follow these steps to get the project up and running on your local machine:
    git clone <repository_url>
    ```
 
-2. **Navigate to the project directory**
-
-   ```sh
-   cd nqueens_solver_api
-   ```
-
-3. **Build and run the services using Docker Compose**
+2. **Build and run the services using Docker Compose**
 
    ```sh
    docker-compose up --build
@@ -47,7 +41,7 @@ Follow these steps to get the project up and running on your local machine:
 
    This command will build and start both the SQL Server and the web API containers.
 
-4. **Access the API**
+3. **Access the API**
 
 ## Tests
 
