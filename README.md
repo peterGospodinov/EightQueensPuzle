@@ -7,7 +7,7 @@ This project provides a solution to the classic N Queens puzzle, where the chall
 - **Fundamental Solutions Normalization**: Uses a normalization process to identify unique, fundamental solutions among all possible configurations.
 - **BlockingCollection**: Utilizes `BlockingCollection` for thread-safe communication between solution producers and consumers.
 - **EF Core and Database Persistence**: The results of the computation are saved into an SQL database using Entity Framework Core. The project includes database migrations, which are applied automatically after the first start.
-- **API Access**: Provides an API to access stored solutions, enabling easy integration with other systems.
+- **API Access**: Provides an API to access stored solutions.
 - **Console Application for Displaying Results:**: Includes a small console application to quickly display the computed results.
 
 ## Tech Stack
