@@ -29,7 +29,7 @@ var app = builder.Build();
 using (var scope = app.Services.CreateScope())
 {
     var dbMigrationService = scope.ServiceProvider.GetRequiredService<DbMigrationService>();
-    dbMigrationService.ApplyMigrations();  // Assuming you have a method to apply migrations
+    dbMigrationService.ApplyMigrations();  
 }
 
 

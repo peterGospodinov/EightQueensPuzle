@@ -15,18 +15,11 @@ namespace QueensPuzzle.Application.Consumer
         public int CountFundamentalSolutions(BlockingCollection<int[]> solutions)
         {
             var uniqueSolutions = new ConcurrentDictionary<string, bool>();
-            int processedCount = 0;
-
+           
             Parallel.ForEach(solutions.GetConsumingEnumerable(), solution =>
             {
                 string normalized = _normalizer.Normalize(solution);
                 uniqueSolutions.TryAdd(normalized, true);
-
-                Interlocked.Increment(ref processedCount);
-                if (processedCount % 100 == 0)
-                {
-                    //Console.WriteLine($"[{DateTime.Now:yyyy-MM-dd HH:mm:ss}] Solutions processed: {processedCount}");
-                }
             });
 
             return uniqueSolutions.Count;

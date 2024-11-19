@@ -7,11 +7,11 @@ namespace NQueensPuzzle.Web.Controllers
 {
     [Route("api/Results")]
     [ApiController]
-    public class ApiController : ControllerBase
+    public class ResultController : ControllerBase
     {
         private readonly ResultContext _context;
 
-        public ApiController(ResultContext context)
+        public ResultController(ResultContext context)
         {
          
             _context = context;
@@ -27,13 +27,20 @@ namespace NQueensPuzzle.Web.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<SolutionResult>>> GetResults()
         {
-            var results = await _context.SolutionResults.ToListAsync();
-            if (results == null || !results.Any())
+            try 
             {
-                return NoContent(); 
-            }
+                var results = await _context.SolutionResults.ToListAsync();
+                if (results == null || !results.Any())
+                {
+                    return NoContent();
+                }
 
-            return Ok(results); 
+                return Ok(results);
+            }
+            catch (Exception ex)
+            {               
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
         }
 
         /// <summary>
@@ -47,12 +54,20 @@ namespace NQueensPuzzle.Web.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<SolutionResult>> GetResult(int id)
         {
-            var result = await _context.SolutionResults.FindAsync(id);
-            if (result == null)
+            try 
             {
-                return NotFound();
+                var result = await _context.SolutionResults.FindAsync(id);
+                if (result == null)
+                {
+                    return NotFound();
+                }
+                return result;
             }
-            return result;
+            catch (Exception ex)
+            {              
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
         }
+
     }
 }
